@@ -1,0 +1,2 @@
+sdgbcIcon ICON "sdgbc.ico"
+#include <wx/msw/wx.rc>
