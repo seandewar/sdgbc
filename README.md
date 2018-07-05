@@ -18,6 +18,13 @@ A copy of the submitted dissertation and viva presentation slides can be
 found in the `docs` directory.
 
 
+## Short Overview Video
+
+Click on the image below to be taken a 1 minute overview video describing sdgbc: 
+
+[![video](https://img.youtube.com/vi/l-BObaR3Klc/0.jpg)](https://www.youtube.com/watch?v=l-BObaR3Klc "sdgbc - A Short Overview")
+
+
 ## Building
 
 sdgbc is configured to be built using CMake (version 3.5 or above). The code relies
