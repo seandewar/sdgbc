@@ -59,7 +59,7 @@ the software (without debugging).
 ### Building for Linux
 
 *The following has been tested using CMake 3.5, GCC 5.4, wxWidgets 3.0.1 and SFML
-2.3.1:*  
+2.3.1 on X11:*  
 **(You may experience some X11 compatibility issues running the software with any
 version of SFML greater than 2.3.1!)**
 

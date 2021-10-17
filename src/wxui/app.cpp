@@ -7,7 +7,19 @@
   #include <windows.h>
 #endif
 
-wxIMPLEMENT_APP(App);
+#ifdef __WXGTK__
+  #include <gdk/gdkx.h>
+
+  wxIMPLEMENT_WX_THEME_SUPPORT;
+  wxIMPLEMENT_APP_NO_MAIN(App);
+
+  int main(int argc, char *argv[]) {
+    gdk_set_allowed_backends("x11");
+    return wxEntry(argc, argv);
+  }
+#else
+  wxIMPLEMENT_APP(App);
+#endif
 
 bool App::OnInit() {
   // allow wxWidgets to initialize the wxApp first
