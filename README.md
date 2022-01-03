@@ -1,5 +1,8 @@
 # sdgbc
 
+_NOTE: this project is not actively maintained, though I do sometimes apply
+bugfixes due to dependency updates._  
+
 A software emulator for the Nintendo Game Boy Color written in C++ using SFML
 and wxWidgets. Available for Windows and Linux (tested using the MSVC and GCC
 compilers).  
