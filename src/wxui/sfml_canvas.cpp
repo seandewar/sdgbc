@@ -36,15 +36,16 @@ SfmlCanvas::SfmlCanvas(wxWindow* parent, wxWindowID id, const wxPoint& pos,
 #endif
 }
 
-void SfmlCanvas::CanvasRender() {}
+void SfmlCanvas::CanvasRender() {
+  wxWakeUpIdle();
+}
 
 bool SfmlCanvas::HasFocus() const {
   return isInFocus_;
 }
 
-void SfmlCanvas::OnIdle(wxIdleEvent& event) {
+void SfmlCanvas::OnIdle(wxIdleEvent&) {
   Refresh(); // send a paint msg when control is idle to ensure max frame rate
-  event.RequestMore();
 }
 
 void SfmlCanvas::OnPaint(wxPaintEvent&) {

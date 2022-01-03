@@ -54,9 +54,12 @@ void LcdCanvas::CanvasRender() {
 }
 
 void LcdCanvas::LcdRefresh() {
-  std::unique_lock<std::mutex> lockFront(lcdFrontBufferMutex_);
-  std::swap(lcdFrontBuffer_, lcdBackBuffer_);
+  {
+    std::unique_lock<std::mutex> lockFront(lcdFrontBufferMutex_);
+    std::swap(lcdFrontBuffer_, lcdBackBuffer_);
+  }
   lcdTextureNeedsRefresh_ = true;
+  SfmlCanvas::CanvasRender();
 }
 
 void LcdCanvas::ClearToWhite() {
